@@ -1,0 +1,74 @@
+﻿@model RoyalHalls1.Models.Payment
+
+@{
+    ViewData["Title"] = "Payment Info";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.userId = ViewBag.Uid ;
+    ViewBag.home = ViewBag.h;
+
+
+}
+ <div class="container mt-5">
+
+
+<h1>Payment info</h1>
+
+@if (Model==null)
+{
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+    
+}
+
+else
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CardName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cvv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpirationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ballance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.CardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem =>Model.Cvv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ExpirationDate.Value.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Ballance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.User.Email)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Edit"  asp-route-id="@Model.Id">Edit</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+}
+</div>

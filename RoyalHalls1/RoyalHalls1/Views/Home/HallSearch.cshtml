@@ -1,0 +1,78 @@
+﻿@model IEnumerable< RoyalHalls1.Models.Hall>; 
+
+@{
+    ViewData["Title"] = "HallSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.userId = ViewBag.Uid ;
+    ViewBag.home = ViewBag.h;
+
+}
+
+
+                        
+
+
+
+
+      <div  class="our_room">
+         <div class="container">
+             
+           <form asp-action="HallSearch" method="post">
+            
+                <input type="text" class="form-control" name="search" placeholder="search for hall" />
+            <br />
+
+           <button type="submit" class="btn btn-dark">search</button>
+           
+          </form>
+
+            <div class="row">
+
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Our Halls</h2>
+                     <p>Lorem Ipsum available, but the majority have suffered </p>
+                  </div>
+               </div>
+            </div>
+                 
+            <div class="row">
+                @foreach (var item in Model)
+            {
+             
+               
+               <div class="col-md-4 col-sm-6">
+                  <div id="serv_hover"  class="room">
+
+                     <div class="room_img">
+                        <figure><img style="width:350px;height:250px" src=@Url.Content("~/Image/"+item.HPhoto) alt="#"  /></figure>
+                     </div>
+                     <div class="bed_room">
+                        <h3>@item.HName</h3>
+                        <p>@item.HDescription </p>
+                        <br>
+                        <i class="fa fa-map-marker" style="font-size:25px;color:red">@item.HAddress</i><br>
+                        <br>
+                        <h1 class="card-title pricing-card-title">$@item.HPrice <small class="text-muted">/ Day</small></h1>
+                        <br>
+                        <a  class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark" asp-action="UserBooking" asp-route-id="@item.HId">more details</a>
+
+                     </div>
+
+                  </div>
+               </div>
+
+            }  
+            </div>
+               
+                
+            
+           
+              
+           
+         </div>
+      </div>
+      
+      <!-- end our_room -->
+     

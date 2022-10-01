@@ -1,0 +1,112 @@
+﻿@model RoyalHalls1.Models.About
+
+@{
+    ViewData["Title"] = "AboutUs_Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.AP = ViewBag.adminProfile;
+
+}
+
+
+
+
+<div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb bg-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <div class="d-md-flex">
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title">About Us</h3>
+                            
+                            <div class="table-responsive">  
+
+
+
+
+
+<h1>Edit</h1>
+
+<h4>Home</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        
+        <form asp-action="AboutUs_Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control"  />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descriotion" class="control-label"></label>
+                <input asp-for="Descriotion" class="form-control"  />
+                <span asp-validation-for="Descriotion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Aboutphoto" class="control-label"></label>
+                <input asp-for="Aboutphoto" class="form-control"  accept="image/*"/>
+                <span asp-validation-for="Aboutphoto" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary" />
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="AbountUs_Index">Back to About Index</a>
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+        </div>
+
+
+
+
+

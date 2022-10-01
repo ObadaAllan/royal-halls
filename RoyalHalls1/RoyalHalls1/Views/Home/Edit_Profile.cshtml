@@ -1,0 +1,126 @@
+﻿@model RoyalHalls1.Models.User;
+
+@{
+    ViewData["Title"] = "Edit_Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.userId = ViewBag.Uid ;
+    ViewBag.home = ViewBag.h;
+
+
+}
+
+
+ <div class="container-fluid  mt-5">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-5 col-md-12">
+
+  
+      <div class="col-md-12 ">
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body text-center">
+            <div class="mt-3 mb-4">
+              <img src=@Url.Content("~/Image/"+Model.Photo) asp-append-version="true"
+                class="rounded-circle img-fluid" style="width: 200px; height:200px" />
+            </div>
+            <h4 class="mb-2">Fistname:  @Model.Fname</h4>
+            <h4 class="mb-2">Lastname:  @Model.Lname</h4>
+            <h4 class="mb-2">Username:  @Model.Username</h4>
+            <h4 class="mb-2">Email:  @Model.Email</h4>
+
+            <div class="mb-4 pb-2">
+
+              
+            </div>
+            
+            <div class="d-flex justify-content-between text-center mt-5 mb-2">
+              <div>
+                <p class="mb-2 h5"></p>
+                <p class="text-muted mb-0"></p>
+              </div>
+              <div class="px-3">
+                <p class="mb-2 h5"></p>
+                <p class="text-muted mb-0"></p>
+              </div>
+              <div>
+                <p class="mb-2 h5"></p>
+                <p class="text-muted mb-0"></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+                    </div>
+
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form asp-action="Edit_Profile" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Fname" class="control-label"></label>
+                <input asp-for="Fname" class="form-control" />
+                <span asp-validation-for="Fname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lname" class="control-label"></label>
+                <input asp-for="Lname" class="form-control" />
+                <span asp-validation-for="Lname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userpassword" class="control-label"></label>
+                <input asp-for="Userpassword" class="form-control" />
+                <span asp-validation-for="Userpassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" accept="image/*" class="form-control" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            
+            <div class="form-group">
+                <input type="submit" value="Upadate Profile" class="btn btn-primary" />
+            </div>
+        </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+           
+

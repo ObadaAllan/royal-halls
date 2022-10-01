@@ -1,0 +1,104 @@
+﻿@model IEnumerable<RoyalHalls1.Models.Reservation>
+
+@{
+    ViewData["Title"] = "MyOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ViewBag.userId = ViewBag.Uid ;
+    ViewBag.home = ViewBag.h;
+
+}
+
+
+ <div class="container mt-5">
+
+
+<h1>My Orders</h1>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users.Fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Users.Lname)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Halls.HName)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Halls.HAddress)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Halls.HPrice)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Datefrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dateto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Users.Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Users.Lname)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Halls.HName)
+            </td>
+               
+            <td>
+                @Html.DisplayFor(modelItem => item.Halls.HAddress)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Halls.HPrice)
+            </td>       
+                                 
+            <td>
+                @Html.DisplayFor(modelItem => item.Datefrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dateto)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            
+            
+            
+        </tr>
+}
+    </tbody>
+</table>
+
+
+ </div>

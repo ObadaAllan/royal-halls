@@ -1,0 +1,151 @@
+﻿@model RoyalHalls1.Models.Home
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.AP = ViewBag.adminProfile;
+
+}
+
+
+<div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb bg-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Manage Halls</h4>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <div class="d-md-flex">
+                            <ol class="breadcrumb ms-auto">
+                                <li><a href="#" class="fw-normal">Dashboard</a></li>
+                            </ol>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            
+                            <div class="table-responsive">  
+
+
+<h1>Create</h1>
+
+<h4>Home</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LogoImageFile" class="control-label"></label>
+                <input asp-for="LogoImageFile" class="form-control"  accept="image/*"/>
+                <span asp-validation-for="LogoImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control"  />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Titledesc" class="control-label"></label>
+                <input asp-for="Titledesc" class="form-control" />
+                <span asp-validation-for="Titledesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SliderImageFile1" class="control-label"></label>
+                <input asp-for="SliderImageFile1" class="form-control"  accept="image/*"/>
+                <span asp-validation-for="SliderImageFile1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SliderImageFile2" class="control-label"></label>
+                <input asp-for="SliderImageFile2" class="form-control" accept="image/*" />
+                <span asp-validation-for="SliderImageFile2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SliderImageFile3" class="control-label"></label>
+                <input asp-for="SliderImageFile3" class="form-control" accept="image/*" />
+                <span asp-validation-for="SliderImageFile3" class="text-danger"></span>
+            </div>
+            
+            
+            
+            
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medialink1" class="control-label"></label>
+                <input asp-for="Medialink1" class="form-control" />
+                <span asp-validation-for="Medialink1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medialink2" class="control-label"></label>
+                <input asp-for="Medialink2" class="form-control" />
+                <span asp-validation-for="Medialink2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medialink3" class="control-label"></label>
+                <input asp-for="Medialink3" class="form-control" />
+                <span asp-validation-for="Medialink3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+            
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+        </div>
